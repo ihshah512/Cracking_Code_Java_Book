@@ -1,0 +1,73 @@
+++++++++++++++++BIG O NOTATION++++++++++++++++++++
+1.
+Data structures play a crucial role in computer science and programming, and their performance is often analyzed using Big O notation to understand how they scale with different input sizes. Here are some common data structures and their associated Big O notations for typical operations:
+
+1. **Arrays**:
+   - Access (by index): O(1)
+   - Search (unsorted): O(n)
+   - Search (sorted): O(log n) if binary search is used
+   - Insertion/Deletion (at the beginning): O(n)
+   - Insertion/Deletion (at the end): O(1) if amortized, O(n) in worst-case if resizing is required
+
+2. **Linked Lists**:
+   - Access (by index): O(n)
+   - Search: O(n)
+   - Insertion/Deletion (at the beginning): O(1)
+   - Insertion/Deletion (at the end): O(n) without a tail pointer, O(1) with a tail pointer
+   - Insertion/Deletion (at a specific position): O(n) if the position is not known in advance
+
+3. **Stacks and Queues** (implemented using arrays or linked lists):
+   - Push (insertion): O(1)
+   - Pop (deletion): O(1)
+   - Peek (access the top element): O(1)
+
+4. **Hash Tables** (average-case complexity):
+   - Insertion: O(1)
+   - Deletion: O(1)
+   - Search: O(1)
+   - Note that these are average-case complexities;
+   in some cases, collisions can make these operations O(n),
+    but good hash functions and collision resolution strategies
+    can minimize this.
+
+5. **Binary Trees** (balanced):
+   - Search/Insertion/Deletion: O(log n)
+   - In the worst case, if the tree becomes unbalanced,
+   it can degrade to O(n).
+
+6. **Binary Search Trees (BST)**:
+   - Search/Insertion/Deletion (average): O(log n)
+   - In the worst case (unbalanced BST): O(n)
+
+7. **Balanced Binary Search Trees** (e.g., AVL trees, Red-Black trees):
+   - Search/Insertion/Deletion: O(log n)
+   - These data structures ensure balance, so worst-case scenarios
+   are avoided.
+
+8. **Heaps** (Binary Min-Heap or Max-Heap):
+   - Insertion: O(log n)
+   - Deletion (min or max): O(log n)
+   - Building a heap from an array: O(n)
+
+9. **Graphs** (varies by representation and algorithms used):
+   - Adjacency Matrix:
+     - Access: O(1)
+     - Insertion/Deletion: O(1)
+   - Adjacency List:
+     - Access: O(degree of the vertex)
+     - Insertion/Deletion: O(degree of the vertex)
+   - Searching and traversing graphs typically involve more complex algorithms like depth-first search (DFS) and breadth-first search (BFS), which can be O(V + E), where V is the number of vertices, and E is the number of edges.
+
+It's important to note that the Big O notations
+ mentioned above represent the average-case or typical
+ time complexities. In practice, worst-case scenarios,
+ data distribution, and the specific implementation of data
+ structures can affect their actual performance. Therefore,
+ it's essential to choose the appropriate data structure
+ based on the specific requirements of your application and
+ the expected usage patterns.
+
+ NOTE:-
+ Upper bound:-> refers to the worst-case scenario for the time and space
+ complexity of an algorithm. In practice we have to choose such alog
+ which has the lower upper bound.
